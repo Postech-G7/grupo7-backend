@@ -7,4 +7,5 @@ const app = ExpressConfig()
 
 app.listen(process.env.PORT , () => {
     console.log("Server Running on Port " + process.env.PORT)
+    console.log("Database connection" + process.env.DATABASE_URL)
 })
