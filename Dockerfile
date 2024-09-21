@@ -1,14 +1,15 @@
 FROM node:20
 USER root
 WORKDIR /home/node/app
-COPY backend/package.json backend/pnpm-lock.yaml ./
-COPY backend/tsconfig.json .
-COPY backend/src ./src
+COPY package.json pnpm-lock.yaml ./
+COPY tsconfig.json .
+COPY src ./src
 RUN npm install -g pnpm
 RUN pnpm install
 RUN pnpm tsx ./src/swagger.ts
+ENV NODE_ENV=production
 ENV PORT=3000
-ENV DATABASE_URL=mongodb://root:mongo2023@database:27017
+ENV DATABASE_URL=MONGO_ATLAS_URL
 
 ENV MERCADO_PAGO_USERID=140225549
 ENV MERCADO_PAGO_TOKEN=TEST-6171745819014663-071918-e3d8f1680321deab4a8c0e430c211de3-140225549
