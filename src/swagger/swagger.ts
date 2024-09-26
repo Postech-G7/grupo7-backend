@@ -1,8 +1,8 @@
-import {
+/* import {
     post_cliente, 
     put_cliente,
 
-} from 'domains/cliente/adapter/driver/rest/swagger/acesso.swagger'
+} from 'domains/cliente/adapter/driver/rest/swagger/acesso.swagger' */
 
 import {
     post_produto, 
@@ -31,10 +31,10 @@ export const swagger = {
     },
     host: `localhost:31300`,
     tags: [                   
-        {
+        /* {
             name: 'Cliente',             
-            description: 'APIs do domínio de Clientes'       
-        },  {
+            description: 'APIs do domínio de Clientes estão '       
+        },  */ {
             name: 'Pedido',             
             description: 'APIs do domínio de Pedidos'       
         },  {
@@ -47,8 +47,8 @@ export const swagger = {
         
     ],
     definitions: {
-        post_cliente,
-        put_cliente,
+      /*   post_cliente,
+        put_cliente, */
         post_produto,
         put_produto,
         post_pedido,
